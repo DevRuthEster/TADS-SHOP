@@ -1,4 +1,3 @@
-"use client";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -9,12 +8,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Marca } from "@/models/marca";
+import { Marca } from "@/models/marca";  
 import { Edit, Trash } from "lucide-react";
 
-type MarcasListProps = {
-  marcas:Marca[]}
-export function MarcasList({marcas}:MarcasListProps) {
+
+export async function MarcasList() {
+ // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula um atraso de 2 segundos
+  const response = await fetch('http://localhost:3002/marcas',{
+    cache: 'no-store', 
+  })
+  const marcas:Marca[] = await response.json();
   return (
     <section className="mt-8 rounded-md border">
       <Table>
@@ -26,21 +29,21 @@ export function MarcasList({marcas}:MarcasListProps) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {marcas.map((marca)=> (
-          <TableRow key={marca.id}>
-            <TableCell className="font-medium">{marca.id}</TableCell>
-            <TableCell>{marca.nome}</TableCell>
-            <TableCell>
-              <div className="flex gap-2">
-                <Button size="icon">
-                  <Edit />
-                </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
+          {marcas.map((marca) => (
+            <TableRow key={marca.id}>
+              <TableCell className="font-medium">{marca.id}</TableCell>
+              <TableCell>{marca.nome}</TableCell>
+              <TableCell>
+                <div className="flex gap-2">
+                  <Button size="icon">
+                    <Edit />
+                  </Button>
+                  <Button size="icon" variant="destructive">
+                    <Trash />
+                  </Button>
+                </div>
+              </TableCell>
+            </TableRow>
           ))}
           <TableRow>
             <TableCell className="font-medium">2</TableCell>
