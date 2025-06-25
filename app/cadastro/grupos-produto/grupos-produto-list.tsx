@@ -1,5 +1,6 @@
 "use client";
 
+import { DeleteButton } from "@/components/delete-button";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -33,9 +34,7 @@ export function GruposProdutoList() {
                 <Button size="icon">
                   <Edit />
                 </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
+                <DeleteButton></DeleteButton>
               </div>
             </TableCell>
           </TableRow>
@@ -48,9 +47,7 @@ export function GruposProdutoList() {
                 <Button size="icon">
                   <Edit />
                 </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
+                <DeleteButton></DeleteButton>
               </div>
             </TableCell>
           </TableRow>

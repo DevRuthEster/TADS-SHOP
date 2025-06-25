@@ -28,5 +28,24 @@
       "id": "79f8",
       "nome": "Ruth Ester"
     }
+  ],
+
+  "grupo": [
+    {
+      "id": "1",
+      "nome": "Roupas"
+    },
+    {
+      "id": "2",
+      "nome": "Calçados"
+    },
+    {
+      "id": "3",
+      "nome": "Móveis"
+    },
+    {
+      "id": "9091",
+      "nome": "Eletrônicos"
+    }
   ]
 }

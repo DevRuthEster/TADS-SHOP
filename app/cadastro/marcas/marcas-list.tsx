@@ -1,4 +1,5 @@
 
+import { DeleteButton } from "@/components/delete-button";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -38,9 +39,7 @@ export async function MarcasList() {
                   <Button size="icon">
                     <Edit />
                   </Button>
-                  <Button size="icon" variant="destructive">
-                    <Trash />
-                  </Button>
+                  <DeleteButton></DeleteButton>
                 </div>
               </TableCell>
             </TableRow>
