@@ -1,4 +1,3 @@
-
 import { DeleteButton } from "@/components/delete-button";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,16 +8,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Marca } from "@/models/marca";  
+import { Marca } from "@/models/marca";
 import { Edit, Trash } from "lucide-react";
 
 
 export async function MarcasList() {
- // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula um atraso de 2 segundos
-  const response = await fetch('http://localhost:3002/marcas',{
-    cache: 'no-store', 
-  })
-  const marcas:Marca[] = await response.json();
+   //await new Promise((resolve)=>{setTimeout(resolve,3000)})
+
+   const response = await fetch(`${process.env.API_URL}/marca`,{
+     cache:'no-store'
+   })
+   const marcas:Marca[] = await response.json();
   return (
     <section className="mt-8 rounded-md border">
       <Table>
@@ -39,25 +39,11 @@ export async function MarcasList() {
                   <Button size="icon">
                     <Edit />
                   </Button>
-                  <DeleteButton></DeleteButton>
+                  <DeleteButton id={marca.id}/>
                 </div>
               </TableCell>
             </TableRow>
           ))}
-          <TableRow>
-            <TableCell className="font-medium">2</TableCell>
-            <TableCell>Marca 2</TableCell>
-            <TableCell>
-              <div className="flex gap-2">
-                <Button size="icon">
-                  <Edit />
-                </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
         </TableBody>
       </Table>
     </section>

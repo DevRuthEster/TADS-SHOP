@@ -13,39 +13,44 @@
       "nome": "Sony"
     },
     {
-      "id": "9091",
-      "nome": "nike"
+      "id": "3a08",
+      "nome": "Microsoft"
     },
     {
-      "id": "042b",
-      "nome": "marca"
+      "id": "bb90",
+      "nome": "Nova Marca"
     },
     {
-      "id": "7600",
-      "nome": "Ruth "
+      "id": "c01c",
+      "nome": "MARCa"
     },
     {
-      "id": "79f8",
-      "nome": "Ruth Ester"
-    }
-  ],
-
-  "grupo": [
-    {
-      "id": "1",
-      "nome": "Roupas"
+      "id": "1dd7",
+      "nome": "mamsda"
     },
     {
-      "id": "2",
-      "nome": "Calçados"
+      "id": "7207",
+      "nome": "Teste"
     },
     {
-      "id": "3",
-      "nome": "Móveis"
+      "id": "f92f",
+      "nome": "tee"
     },
     {
-      "id": "9091",
-      "nome": "Eletrônicos"
+      "id": "34a5",
+      "nome": "sdfsdf"
+    },
+    {
+      "id": "21d4",
+      "nome": "sdgsdf"
+    },
+    {
+      "id": "34f4",
+      "nome": "sdfsdf"
+    },
+    {
+      "id": "9584",
+      "nome": "Philco"
     }
   ]
 }

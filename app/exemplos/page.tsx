@@ -3,9 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 type Marca = {
-  id: number;
+  id:number,
   nome: string;
-};
+}
+
 export default function Page() {
   let [contador, setContador] = useState(0);
   let [marcas, setMarcas] = useState([]);
@@ -30,7 +31,7 @@ export default function Page() {
       <div className="m-4">
         <h2>Marcas</h2>
         <ul>
-          {marcas.map((marca: Marca) => (
+          {marcas.map((marca:Marca) => (
             <li key={marca.id}>{marca.nome}</li>
           ))}
         </ul>
