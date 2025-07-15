@@ -1,56 +1,12 @@
 {
-  "marcas": [
+  "marca": [
     {
-      "id": "1",
-      "nome": "Samsung"
+      "id": "f79e",
+      "nome": "Sony 123"
     },
     {
-      "id": "2",
-      "nome": "Apple"
-    },
-    {
-      "id": "3",
-      "nome": "Sony"
-    },
-    {
-      "id": "3a08",
+      "id": "bf80",
       "nome": "Microsoft"
-    },
-    {
-      "id": "bb90",
-      "nome": "Nova Marca"
-    },
-    {
-      "id": "c01c",
-      "nome": "MARCa"
-    },
-    {
-      "id": "1dd7",
-      "nome": "mamsda"
-    },
-    {
-      "id": "7207",
-      "nome": "Teste"
-    },
-    {
-      "id": "f92f",
-      "nome": "tee"
-    },
-    {
-      "id": "34a5",
-      "nome": "sdfsdf"
-    },
-    {
-      "id": "21d4",
-      "nome": "sdgsdf"
-    },
-    {
-      "id": "34f4",
-      "nome": "sdfsdf"
-    },
-    {
-      "id": "9584",
-      "nome": "Philco"
     }
   ]
 }

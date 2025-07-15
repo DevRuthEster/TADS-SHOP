@@ -1,5 +1,5 @@
-'use client'
-import { deletarMarca } from "@/actions/marca-actions"
+"use client";
+import { deletarMarca } from "@/actions/marca-actions";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,27 +10,28 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
-import { Button } from "@/components/ui/button"
-import { Trash } from "lucide-react"
-import { toast } from "sonner"
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
+import { Trash } from "lucide-react";
+import { toast } from "sonner";
 type DeleteButtonProps = {
-  id: number
-}
-export function DeleteButton({id }: DeleteButtonProps) {
-
+  id: string;
+};
+export function DeleteButton({ id }: DeleteButtonProps) {
   const handleDelete = async () => {
-   const{sucesso,mensagem} = await deletarMarca(id)
-   if(sucesso){
-    toast.success(mensagem)
-   } else{
-    toast.error(mensagem)
-   }
-  }
+    const { sucesso, mensagem } = await deletarMarca(id);
+    if (sucesso) {
+      toast.success(mensagem);
+    } else {
+      toast.error(`Erro: ${mensagem}`);
+    }
+  };
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive" size='icon'><Trash/></Button>
+        <Button variant="destructive" size="icon">
+          <Trash />
+        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
@@ -43,10 +44,12 @@ export function DeleteButton({id }: DeleteButtonProps) {
         <AlertDialogFooter>
           <AlertDialogCancel>Cancelar</AlertDialogCancel>
           <AlertDialogAction asChild>
-            <Button variant="destructive" onClick={handleDelete}>Excluir</Button>
+            <Button variant="destructive" onClick={handleDelete}>
+              Excluir
+            </Button>
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
+  );
 }

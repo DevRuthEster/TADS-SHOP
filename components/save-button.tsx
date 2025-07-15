@@ -1,15 +1,16 @@
 import { Loader2Icon, SaveIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
-   type SaveButtonProsps = {
-        isPeding?: boolean;
-    }
-export function SaveButton({isPeding}: SaveButtonProsps) {
- 
+type SaveButtonProps = {
+    isPending: boolean;
+}
+export function SaveButton({isPending}: SaveButtonProps) {
+   
     return (
         <>
             <Button type="submit">
-                {isPeding ? <><Loader2Icon className="animation-spin" /> Aguarde... </> :
+                {isPending ?
+                    <><Loader2Icon className="animate-spin" />Aguarde...</> :
                     <><SaveIcon />Salvar</>}
             </Button>
         </>
